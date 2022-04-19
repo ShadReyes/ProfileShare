@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function Registration() {
   return (
     <section className="vh-100 bg-image" style={{}}>
@@ -85,9 +87,7 @@ export default function Registration() {
 
                     <p className="text-center text-muted mt-5 mb-0">
                       Have already an account?{" "}
-                      <a href="#!" className="fw-bold text-body">
-                        <u>Login here</u>
-                      </a>
+                      <Link to="/authenticationScreens/LoginScreen">Login</Link>
                     </p>
                   </form>
                 </div>
