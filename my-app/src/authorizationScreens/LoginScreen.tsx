@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -70,7 +71,10 @@ export default function Login() {
 
                 <div>
                   <p className="mb-0">
-                    {/* Don't have an account? <Link to="/">Sign Up</Link> */}
+                    Don't have an account?{" "}
+                    <Link to="/authenticationScreens/RegistrationScreen">
+                      Sign Up
+                    </Link>
                   </p>
                 </div>
               </div>
