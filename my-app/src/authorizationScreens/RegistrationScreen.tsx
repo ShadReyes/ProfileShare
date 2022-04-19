@@ -1,95 +1,86 @@
 import { Link } from "react-router-dom";
 
 export default function Registration() {
+  const onRegistrationPress = () => {
+    window.open("./LoginScreen");
+  };
+
   return (
-    <section className="vh-100 bg-image" style={{}}>
-      <div className="mask d-flex align-items-center h-100 gradient-custom-3">
-        <div className="container h-100">
-          <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col-12 col-md-9 col-lg-7 col-xl-6">
-              <div className="card" style={{ borderRadius: 15 }}>
-                <div className="card-body p-5">
-                  <h2 className="text-uppercase text-center mb-5">
-                    Create an account
-                  </h2>
+    <section className="vh-100 gradient-custom">
+      <div className="container py-5 h-100">
+        <div className="row d-flex justify-content-center align-items-center h-100">
+          <div className="col-12 col-md-8 col-lg-6 col-xl-5">
+            <div
+              className="card bg-dark text-white"
+              style={{ borderRadius: "1rem" }}
+            >
+              <div className="card-body p-5 text-center">
+                <div className="mb-md-5 mt-md-4 pb-5">
+                  <h2 className="fw-bold mb-2 text-uppercase">Register</h2>
+                  <p className="text-white-50 mb-5">
+                    Fill out the form below to register for ShairLog
+                  </p>
 
-                  <form>
-                    <div className="form-outline mb-4">
-                      <input
-                        type="text"
-                        id="form3Example1cg"
-                        className="form-control form-control-lg"
-                      />
-                      <label className="form-label" htmlFor="form3Example1cg">
-                        Your Name
-                      </label>
-                    </div>
+                  <div className="form-outline form-white mb-4">
+                    <input
+                      type="text"
+                      id="typeName"
+                      className="form-control form-control-lg"
+                    />
+                    <label className="form-label" htmlFor="typeName">
+                      Name
+                    </label>
+                  </div>
 
-                    <div className="form-outline mb-4">
-                      <input
-                        type="email"
-                        id="form3Example3cg"
-                        className="form-control form-control-lg"
-                      />
-                      <label className="form-label" htmlFor="form3Example3cg">
-                        Your Email
-                      </label>
-                    </div>
+                  <div className="form-outline form-white mb-4">
+                    <input
+                      type="email"
+                      id="typeEmailX"
+                      className="form-control form-control-lg"
+                    />
+                    <label className="form-label" htmlFor="typeEmailX">
+                      Email
+                    </label>
+                  </div>
 
-                    <div className="form-outline mb-4">
-                      <input
-                        type="password"
-                        id="form3Example4cg"
-                        className="form-control form-control-lg"
-                      />
-                      <label className="form-label" htmlFor="form3Example4cg">
-                        Password
-                      </label>
-                    </div>
+                  <div className="form-outline form-white mb-4">
+                    <input
+                      type="password"
+                      id="typePasswordX"
+                      className="form-control form-control-lg"
+                    />
+                    <label className="form-label" htmlFor="typePasswordX">
+                      Password
+                    </label>
+                  </div>
 
-                    <div className="form-outline mb-4">
-                      <input
-                        type="password"
-                        id="form3Example4cdg"
-                        className="form-control form-control-lg"
-                      />
-                      <label className="form-label" htmlFor="form3Example4cdg">
-                        Repeat your password
-                      </label>
-                    </div>
+                  <div className="form-outline form-white mb-4">
+                    <input
+                      type="password"
+                      id="retypePasswordX"
+                      className="form-control form-control-lg"
+                    />
+                    <label className="form-label" htmlFor="retypePasswordX">
+                      Confirm Password
+                    </label>
+                  </div>
 
-                    <div className="form-check d-flex justify-content-center mb-5">
-                      <input
-                        className="form-check-input me-2"
-                        type="checkbox"
-                        value=""
-                        id="form2Example3cg"
-                      />
-                      <label
-                        className="form-check-label"
-                        htmlFor="form2Example3g"
-                      >
-                        I agree all statements in{" "}
-                        <a href="#!" className="text-body">
-                          <u>Terms of service</u>
-                        </a>
-                      </label>
-                    </div>
+                  <button
+                    className="btn btn-outline-light btn-lg px-5"
+                    type="submit"
+                    onClick={onRegistrationPress}
+                  >
+                    Register
+                  </button>
+                </div>
 
-                    <div className="d-flex justify-content-center">
-                      <button
-                        type="button"
-                        className="btn btn-success btn-block btn-lg gradient-custom-4 text-body"
-                      >
-                        Register
-                      </button>
-                    </div>
-
-                    <p className="text-center text-muted mt-5 mb-0">
-                      Have already an account?{" "}
-                      <Link to="/authenticationScreens/LoginScreen">Login</Link>
-                    </p>
-                  </form>
+                <div>
+                  <p className="mb-0">
+                    Already have an account?{" "}
+                    <Link to="/authenticationScreens/LoginScreen">
+                      Sign in.
+                    </Link>
+                  </p>
                 </div>
               </div>
             </div>
