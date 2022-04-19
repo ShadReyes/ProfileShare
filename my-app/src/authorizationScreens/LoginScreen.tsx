@@ -6,7 +6,7 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const onLoginPress = () => {
-    alert("Hello");
+    window.open("../homeScreens/ProfileScreen");
   };
 
   return (

@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 import Registration from "./authorizationScreens/RegistrationScreen";
+import ProfileScreen from "./homeScreens/ProfileScreen";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,6 +19,8 @@ root.render(
         path="/authenticationScreens/RegistrationScreen"
         element={<Registration />}
       />
+
+      <Route path="/homeScreens/ProfileScreen" element={<ProfileScreen />} />
     </Routes>
   </BrowserRouter>
 );
