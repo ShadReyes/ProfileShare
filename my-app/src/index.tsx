@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import App from "./App";
 import Registration from "./authorizationScreens/RegistrationScreen";
-import ProfileScreen from "./homeScreens/ProfileScreen";
+import HomeScreen from "./homeScreens/HomeScreen";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -20,7 +20,7 @@ root.render(
         element={<Registration />}
       />
 
-      <Route path="/homeScreens/ProfileScreen" element={<ProfileScreen />} />
+      <Route path="/homeScreens/HomeScreen" element={<HomeScreen />} />
     </Routes>
   </BrowserRouter>
 );
