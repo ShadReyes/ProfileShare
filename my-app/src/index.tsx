@@ -21,18 +21,3 @@ root.render(
     </Routes>
   </BrowserRouter>
 );
-
-//<BrowserRouter>
-//     <Routes>
-//       <Route path="/" element={<Login />}>
-//         <Route path="/authenticationScreens/LoginScreen" element={<Login />} />
-
-//         <Route
-//           path="/authenticationScreens/RegistrationScreen"
-//           element={<Registration />}
-//         />
-
-//         <Navigate to="/authenticationScreens/LoginScreen" />
-//       </Route>
-//     </Routes>
-//   </BrowserRouter>
