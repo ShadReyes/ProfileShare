@@ -1,6 +1,5 @@
 import CSS from "csstype";
 import { InputHTMLAttributes, useState } from "react";
-import { InputGroupProps } from "react-bootstrap";
 
 interface IShairInputProps extends InputHTMLAttributes<HTMLInputElement> {
   label: string;

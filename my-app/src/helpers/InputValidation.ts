@@ -7,5 +7,6 @@ export const isValidEmail = (email: string) => {
 };
 
 export const isValidPassword = (pass: string) => {
+  console.log(pass.length);
   return pass.length >= 8;
 };
