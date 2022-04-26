@@ -14,10 +14,6 @@ export default function Registration() {
   const [password, setPassword] = useState("");
   const [confPassword, setConfPassword] = useState("");
 
-  const onRegistrationPress = () => {
-    window.open("../homeScreens/ProfileScreen");
-  };
-
   const isValidForSubmission = () => {
     return (
       isValidEmail(email) &&
