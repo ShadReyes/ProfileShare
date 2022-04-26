@@ -7,12 +7,8 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const isValidForSubmition = () => {
+  const isValidForSubmission = () => {
     return isValidEmail(email) && isValidPassword(password);
-  };
-
-  const onLoginPress = () => {
-    window.open("../homeScreens/ProfileScreen");
   };
 
   return (
@@ -40,6 +36,7 @@ export default function Login() {
 
                   <ShairInput
                     label="Password"
+                    type={"password"}
                     validateFunction={() => isValidPassword(password)}
                     onChange={(e) => setPassword(e.target.value)}
                     validationErrorMessage={
@@ -53,14 +50,15 @@ export default function Login() {
                     </a>
                   </p>
 
-                  <button
-                    className="btn btn-outline-light btn-lg px-5"
-                    type="submit"
-                    onClick={onLoginPress}
-                    disabled={!isValidForSubmition()}
-                  >
-                    Login
-                  </button>
+                  <Link to="/homeScreens/HomeScreen">
+                    <button
+                      className="btn btn-outline-light btn-lg px-5"
+                      type="submit"
+                      disabled={!isValidForSubmission()}
+                    >
+                      Login
+                    </button>
+                  </Link>
                 </div>
 
                 <div>

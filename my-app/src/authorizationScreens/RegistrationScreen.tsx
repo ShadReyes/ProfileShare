@@ -1,8 +1,35 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+import ShairInput from "../components/ShairInput";
+import {
+  isValidEmail,
+  isValidName,
+  isValidPassword,
+} from "../helpers/InputValidation";
 
 export default function Registration() {
+  const [email, setEmail] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [password, setPassword] = useState("");
+  const [confPassword, setConfPassword] = useState("");
+
   const onRegistrationPress = () => {
-    window.open("./LoginScreen");
+    window.open("../homeScreens/ProfileScreen");
+  };
+
+  const isValidForSubmission = () => {
+    return (
+      isValidEmail(email) &&
+      isValidPassword(password) &&
+      passwordsMatch() &&
+      isValidName(firstName) &&
+      isValidName(lastName)
+    );
+  };
+
+  const passwordsMatch = () => {
+    return password === confPassword;
   };
 
   return (
@@ -21,57 +48,53 @@ export default function Registration() {
                     Fill out the form below to register for ShairLog
                   </p>
 
-                  <div className="form-outline form-white mb-4">
-                    <input
-                      type="text"
-                      id="typeName"
-                      className="form-control form-control-lg"
-                    />
-                    <label className="form-label" htmlFor="typeName">
-                      Name
-                    </label>
-                  </div>
+                  <ShairInput
+                    label="First Name"
+                    type={"text"}
+                    validateFunction={() => isValidName(firstName)}
+                    onChange={(e) => setFirstName(e.target.value)}
+                  />
 
-                  <div className="form-outline form-white mb-4">
-                    <input
-                      type="email"
-                      id="typeEmailX"
-                      className="form-control form-control-lg"
-                    />
-                    <label className="form-label" htmlFor="typeEmailX">
-                      Email
-                    </label>
-                  </div>
+                  <ShairInput
+                    label="Last Name"
+                    type={"text"}
+                    validateFunction={() => isValidName(firstName)}
+                    onChange={(e) => setLastName(e.target.value)}
+                  />
 
-                  <div className="form-outline form-white mb-4">
-                    <input
-                      type="password"
-                      id="typePasswordX"
-                      className="form-control form-control-lg"
-                    />
-                    <label className="form-label" htmlFor="typePasswordX">
-                      Password
-                    </label>
-                  </div>
+                  <ShairInput
+                    label="Email"
+                    validateFunction={() => isValidEmail(email)}
+                    onChange={(e) => setEmail(e.target.value)}
+                    validationErrorMessage={"Email not valid"}
+                  />
 
-                  <div className="form-outline form-white mb-4">
-                    <input
-                      type="password"
-                      id="retypePasswordX"
-                      className="form-control form-control-lg"
-                    />
-                    <label className="form-label" htmlFor="retypePasswordX">
-                      Confirm Password
-                    </label>
-                  </div>
+                  <ShairInput
+                    label="Password"
+                    type={"password"}
+                    validateFunction={() => isValidPassword(password)}
+                    onChange={(e) => setPassword(e.target.value)}
+                    validationErrorMessage={
+                      "Password must be at least 8 characters"
+                    }
+                  />
 
-                  <button
-                    className="btn btn-outline-light btn-lg px-5"
-                    type="submit"
-                    onClick={onRegistrationPress}
-                  >
-                    Register
-                  </button>
+                  <ShairInput
+                    label="Confirm Password"
+                    type={"password"}
+                    validateFunction={() => passwordsMatch()}
+                    onChange={(e) => setConfPassword(e.target.value)}
+                    validationErrorMessage={"Passwords must match"}
+                  />
+                  <Link to="/homeScreens/HomeScreen">
+                    <button
+                      className="btn btn-outline-light btn-lg px-5"
+                      type="submit"
+                      disabled={!isValidForSubmission()}
+                    >
+                      Register
+                    </button>
+                  </Link>
                 </div>
 
                 <div>
