@@ -30,7 +30,7 @@ export default function HomeScreen() {
         <a
           className="navbar-brand text-light"
           href="https://www.google.com"
-          style={{ marginLeft: 10 }}
+          style={{ marginLeft: 20 }}
         >
           ShariLog
         </a>
