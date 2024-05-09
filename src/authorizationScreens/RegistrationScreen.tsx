@@ -41,7 +41,7 @@ export default function Registration() {
                 <div className="mb-md-5 mt-md-4 pb-5">
                   <h2 className="fw-bold mb-2 text-uppercase">Register</h2>
                   <p className="text-white-50 mb-5">
-                    Fill out the form below to register for ShairLog
+                    Fill out the form below to register for ProfileShare
                   </p>
 
                   <ShairInput

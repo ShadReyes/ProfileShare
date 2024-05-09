@@ -32,7 +32,7 @@ export default function HomeScreen() {
           href="https://www.google.com"
           style={{ marginLeft: 20 }}
         >
-          ShariLog
+          ProfileShare
         </a>
         <div className="collapse navbar-collapse" id="navbarText">
           <ul className="navbar-nav mr-auto">
@@ -86,6 +86,8 @@ export default function HomeScreen() {
             width: "50%",
             height: "50%",
             margin: "auto",
+            boxShadow:
+              "2 2 5 #E6E6E6, 0px 0px 0px #E6E6E6, 0px 0px 0px #E6E6E6",
           }}
         >
           <div
