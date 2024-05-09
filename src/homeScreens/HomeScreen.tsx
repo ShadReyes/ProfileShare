@@ -114,11 +114,11 @@ export default function HomeScreen() {
           >
             <div>
               <h2>Shadrac Reyes</h2>
-              <h5>Software Engineer 1</h5>
+              <h5>Software Engineer 2</h5>
               <br />
-              <h5>HashiDev</h5>
-              <h5>(573) 554-2990</h5>
-              <h5>shadrac@hashi.dev</h5>
+              <h5>[Company]</h5>
+              <h5>[Phone Number]</h5>
+              <h5>[Email Address]</h5>
             </div>
           </div>
           <div
